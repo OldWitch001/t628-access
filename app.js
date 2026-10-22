@@ -1,7 +1,7 @@
 const fixedRoutes = {
   fn: 'https://oldwitch.fnos.net/',
   frp: 'https://www-nas.u889354.nyat.app:37304/',
-  miao: 'http://16b507f9a0e8.ofalias.net:59866/',
+  miao: 'https://16b507f9a0e8.ofalias.net:59037/',
   ts: 'http://ts.oldwitch.dynv6.net:5666/',
   et: 'http://et.oldwitch.dynv6.net:5666/',
   zt: 'http://zt.oldwitch.dynv6.net:5666/'
