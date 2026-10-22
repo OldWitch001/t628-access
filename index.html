@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src https://dns.google https://cloudflare-dns.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>OldWitch · NAS 入口</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main>
+    <header><span class="brand">OW<span class="dot">●</span></span><span class="device">T628 / fnOS</span></header>
+    <section class="intro"><p class="eyebrow">OLDWITCH · PERSONAL NAS</p><h1>选一条路，<br>回到你的 NAS。</h1><p class="lead">无需记住每个地址。公网入口直接打开；组网入口请先连接对应客户端。</p></section>
+    <section aria-labelledby="public-title"><div class="section-title"><h2 id="public-title">网页入口</h2><span>无需组网客户端</span></div>
+      <div class="grid">
+        <article class="card"><span class="tag">日常访问</span><h3>FN Connect</h3><p>飞牛提供的远程网页入口。使用飞牛账号登录。</p><a class="button" href="https://oldwitch.fnos.net/" target="_blank" rel="noopener noreferrer">打开 FN Connect <span>↗</span></a></article>
+        <article class="card"><span class="tag">备用线路</span><h3>樱花 FRP</h3><p>通过现有樱花隧道访问飞牛，保留独立登录。</p><a class="button" href="https://www-nas.u889354.nyat.app:37304/" target="_blank" rel="noopener noreferrer">打开樱花入口 <span>↗</span></a></article>
+        <article class="card accent"><span class="tag">地址自动获取</span><h3>CF 快捷通道</h3><p>从 DNS 读取当前临时地址，NAS 重启后由更新服务同步。</p><button class="button" id="cf-open" disabled>正在读取地址… <span>↗</span></button><div class="cf-meta"><span id="cf-status" role="status">读取地址不代表通道在线。</span><button id="cf-refresh" class="text-button">刷新</button></div></article>
+      </div>
+    </section>
+    <section aria-labelledby="vpn-title"><div class="section-title"><h2 id="vpn-title">组网入口</h2><span>先连接客户端</span></div><div class="vpn-grid">
+      <a class="vpn" href="http://ts.oldwitch.dynv6.net:5666/" target="_blank" rel="noopener noreferrer"><span class="vpn-mark">TS</span><span><strong>Tailscale</strong><small>需要 Tailscale 已连接</small></span><span class="arrow">↗</span></a>
+      <a class="vpn" href="http://et.oldwitch.dynv6.net:5666/" target="_blank" rel="noopener noreferrer"><span class="vpn-mark">ET</span><span><strong>EasyTier</strong><small>需要 EasyTier 已连接</small></span><span class="arrow">↗</span></a>
+      <a class="vpn" href="http://zt.oldwitch.dynv6.net:5666/" target="_blank" rel="noopener noreferrer"><span class="vpn-mark">ZT</span><span><strong>ZeroTier</strong><small>需要 ZeroTier 已连接</small></span><span class="arrow">↗</span></a>
+    </div></section>
+    <aside>这是入口导航，不会自动切换线路，也不转发 NAS 流量。某条线路打不开时，可返回选择其他入口。</aside>
+    <footer><span>OldWitch / T628</span><span>每条线路，独立连接。</span></footer>
+  </main>
+</body>
+</html>
